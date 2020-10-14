@@ -8,7 +8,7 @@
             sync-j="4" />
 
     <!-- Manifest -->
-    <project path="android" name="android" remote="cheatos" />
+    <project path="android" name="android" remote="chetos" />
 
     <!-- Vendor -->
     <project path="vendor/cheatos" name="android_vendor_cheatos" remote="chetos" />
