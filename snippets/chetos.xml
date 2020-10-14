@@ -11,6 +11,6 @@
     <project path="android" name="android" remote="cheatos" />
 
     <!-- Vendor -->
-    <project path="vendor/cheatos" name="android_vendor_cheatos" remote="cheatos" />
+    <project path="vendor/cheatos" name="android_vendor_cheatos" remote="chetos" />
 
 </manifest>
