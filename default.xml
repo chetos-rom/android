@@ -709,7 +709,7 @@
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
 
   <include name="snippets/lineage.xml" />
-  <include name="snippets/cheatos.xml" />
+  <include name="snippets/chetos.xml" />
   <include name="snippets/out.xml" />
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
