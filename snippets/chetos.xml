@@ -7,6 +7,10 @@
             sync-c="true"
             sync-j="4" />
 
-    <project path="android" name="android" />
+    <!-- Manifest -->
+    <project path="android" name="android" remote="cheatos" />
+
+    <!-- Vendor -->
+    <project path="vendor/cheatos" name="android_vendor_cheatos" remote="cheatos" />
 
 </manifest>
