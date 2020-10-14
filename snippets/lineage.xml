@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="lineage" 
+          revision="refs/heads/lineage-18.0"
+          fetch="https://github.com/LineageOS"
+          sync-c="true"
+          sync-j="4" />
+
+  <!-- LineageOS additions -->
+  <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="lineage" />
+  <project path="external/bash" name="android_external_bash" remote="lineage" />
+  <project path="external/exfatprogs" name="android_external_exfatprogs" remote="lineage" />
+  <project path="external/htop" name="android_external_htop" remote="lineage" />
+  <project path="external/libncurses" name="android_external_libncurses" remote="lineage" />
+  <project path="external/nano" name="android_external_nano" remote="lineage" />
+  <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="lineage" />
+  <project path="external/p7zip" name="android_external_p7zip" remote="lineage" />
+  <project path="external/pigz" name="android_external_pigz" remote="lineage" />
+  <project path="external/rsync" name="android_external_rsync" remote="lineage" />
+  <project path="external/unrar" name="android_external_unrar" remote="lineage" />
+  <project path="external/vim" name="android_external_vim" remote="lineage" />
+  <project path="external/zip" name="android_external_zip" remote="lineage" />
+  <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces" remote="lineage" />
+  <project path="hardware/lineage/livedisplay" name="android_hardware_lineage_livedisplay" remote="lineage" />
+  <project path="lineage-sdk" name="android_lineage-sdk" remote="lineage" />
+  <project path="packages/apps/AudioFX" name="android_packages_apps_AudioFX" remote="lineage" />
+  <project path="packages/apps/Eleven" name="android_packages_apps_Eleven" remote="lineage" />
+  <project path="packages/apps/ExactCalculator" name="android_packages_apps_ExactCalculator" remote="lineage" />
+  <project path="packages/apps/FlipFlap" name="android_packages_apps_FlipFlap" remote="lineage" />
+  <project path="packages/apps/Jelly" name="android_packages_apps_Jelly" remote="lineage" />
+  <project path="packages/apps/LineageCustomizer" name="android_packages_apps_LineageCustomizer"  remote="lineage" />
+  <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts"  remote="lineage" />
+  <project path="packages/apps/Profiles" name="android_packages_apps_Profiles" remote="lineage" />
+  <project path="packages/apps/Recorder" name="android_packages_apps_Recorder" remote="lineage" />
+  <project path="packages/apps/Trebuchet" name="android_packages_apps_Trebuchet" remote="lineage" />
+  <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="lineage" />
+  <project path="packages/overlays/Lineage" name="android_packages_overlays_Lineage" remote="lineage" />
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="lineage" />
+  <project path="prebuilts/tools-lineage" name="android_prebuilts_tools-lineage" clone-depth="1" remote="lineage" />
+  <project path="vendor/lineage" name="android_vendor_lineage" remote="lineage" />
+
+  <!-- CodeAurora additions -->
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" groups="qcom,pdk-qcom" remote="lineage" />
+  <project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy" groups="qcom,pdk-qcom" revision="lineage-18.0-legacy-um" remote="lineage" />
+  <project path="device/qcom/sepolicy_vndr" name="android_device_qcom_sepolicy_vndr" groups="qcom,pdk-qcom" remote="lineage" />
+  <project path="external/ant-wireless/ant_client" name="android_external_ant-wireless_ant_client" remote="lineage" />
+  <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="lineage" />
+  <project path="external/ant-wireless/ant_service" name="android_external_ant-wireless_ant_service" remote="lineage" />
+  <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" />
+  <project path="external/ant-wireless/hidl" name="android_external_ant-wireless_hidl" remote="lineage" />
+  <project path="external/json-c" name="android_external_json-c" groups="qcom,pdk-qcom" remote="lineage" />
+  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="lineage" />
+
+  <!-- Infrastructure -->
+  <project path="lineage/ansible" name="ansible" groups="infra" revision="master" remote="lineage" />
+  <project path="lineage/charter" name="charter" groups="infra" revision="master" remote="lineage" />
+  <project path="lineage/crowdin" name="cm_crowdin" groups="infra" revision="master" remote="lineage" />
+  <project path="lineage/cve" name="cve_tracker" groups="infra" revision="master" remote="lineage" />
+  <project path="lineage/hudson" name="hudson" groups="infra" revision="master" remote="lineage" />
+  <project path="lineage/mirror" name="mirror" groups="infra" revision="master" remote="lineage" />
+  <project path="lineage/slackbot" name="slackbot" groups="infra" revision="master" remote="lineage" />
+  <project path="lineage/website" name="www" groups="infra" revision="master" remote="lineage" />
+  <project path="lineage/wiki" name="lineage_wiki" groups="infra" revision="master" remote="lineage" />
+
+  <!-- Tools -->
+  <project path="lineage/contributors-cloud-generator" name="contributors-cloud-generator" groups="tools" revision="master" remote="lineage" />
+  <project path="lineage/scripts" name="scripts" groups="tools" revision="master" remote="lineage" />
+
+<!--Lineage Aosp Forks-->
+  <project path="build/make" name="android_build" groups="pdk" remote="lineage" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/blueprint" name="android_build_blueprint" groups="pdk,tradefed"  remote="lineage" />
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed"  remote="lineage" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="bionic" name="android_bionic" groups="pdk" remote="lineage" />
+  <project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="lineage" />
+  <project path="development" name="android_development" groups="developers,pdk-cw-fs,pdk-fs" remote="lineage" />
+  <project path="device/generic/goldfish" name="android_device_generic_goldfish" groups="pdk" remote="lineage" />
+  <project path="device/generic/goldfish-opengl" name="android_device_generic_goldfish-opengl" groups="pdk" remote="lineage" />
+  <project path="device/google/atv" name="android_device_google_atv" groups="device,broadcom_pdk,generic_fs,pdk" remote="lineage" />
+  <project path="external/guice" name="android_external_guice" groups="pdk" remote="lineage" />
+  <project path="external/libcxx" name="android_external_libcxx" groups="pdk" remote="lineage" />
+  <project path="external/mksh" name="android_external_mksh" groups="pdk" remote="lineage" />
+  <project path="external/tinycompress" name="android_external_tinycompress" groups="pdk" remote="lineage" />
+  <project path="frameworks/av" name="android_frameworks_av" groups="pdk" remote="lineage" />
+  <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="lineage" />
+  <project path="frameworks/native" name="android_frameworks_native" groups="pdk" remote="lineage" />
+  <project path="system/incremental_delivery" name="android_system_incremental_delivery" groups="pdk" remote="lineage" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="lineage" />
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" groups="pdk" remote="lineage" />
+  <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" groups="pdk" remote="lineage" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" groups="pdk" remote="lineage" />
+  <project path="hardware/ril" name="android_hardware_ril" groups="pdk" remote="lineage" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" groups="pdk-fs" remote="lineage" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs" remote="lineage" />
+  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" groups="pdk-fs" remote="lineage" />
+  <project path="packages/apps/Terminal" name="android_packages_apps_Terminal" groups="pdk-fs" remote="lineage" />
+  <project path="packages/apps/TvSettings" name="android_packages_apps_TvSettings" groups="pdk-fs" remote="lineage" />
+  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="lineage" />
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" groups="pdk-fs" remote="lineage" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="lineage" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="lineage" />
+  <project path="system/apex" name="android_system_apex" groups="pdk" remote="lineage" />
+  <project path="system/bt" name="android_system_bt" groups="pdk" remote="lineage" />
+  <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="lineage" />
+  <project path="system/core" name="android_system_core" groups="pdk" remote="lineage" />
+  <project path="system/libufdt" name="android_system_libufdt" groups="pdk" remote="lineage" />
+  <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" groups="pdk" remote="lineage" />
+  <project path="system/update_engine" name="android_system_update_engine" groups="pdk" remote="lineage" />
+  <project path="system/vold" name="android_system_vold" groups="pdk" remote="lineage" />
+  <project path="tools/metalava" name="android_tools_metalava" groups="pdk,tools" remote="lineage" />
+
+</manifest>
